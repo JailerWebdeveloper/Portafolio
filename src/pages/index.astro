@@ -1,0 +1,204 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Jailer vega">
+  <main class="h-screen w-full p-4 textured">
+    <div class="flex justify-center h-full items-center">
+      <div
+        class="container relative flex flex-col items-center justify-between px-6 py-4 mx-auto"
+      >
+        <div class="flex flex-col items-center justify-center">
+          <div class="avatar">
+            <div class="w-24 mask mask-hexagon">
+              <img
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
+            </div>
+          </div>
+          <h2
+          class="max-w-3xl py-2 mx-auto text-5xl font-bold text-center animate__animated  animate__flipInX capitalize prose-stone text-gray-800 md:text-6xl dark:text-white"
+        >
+          Bienvenido
+        </h2>
+          <p class="my-6 text-3xl text-center animate__animated animate__delay-1s animate__flipInX  dark:text-white">
+            Hola , Mi nombre es Jailer Vega🤘
+          </p>
+          <h2
+            class="max-w-3xl  mx-auto text-xl prose text-center border-t text-gray-800 md:text-xl dark:text-white"
+          >
+            Creando Software de calidad!
+          </h2>
+          <div class="flex items-center justify-center mt-7">
+            <a href="" class="ui-btn">
+              <span> Empezemos! </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .ui-btn {
+    --btn-default-bg: rgb(41, 41, 41);
+    --btn-padding: 15px 20px;
+    --btn-hover-bg: rgb(51, 51, 51);
+    --btn-transition: 0.3s;
+    --btn-letter-spacing: 0.1rem;
+    --btn-animation-duration: 1.2s;
+    --btn-shadow-color: rgba(0, 0, 0, 0.137);
+    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+    --hover-btn-color: #fac921;
+    --default-btn-color: #fff;
+    --font-size: 16px;
+    /* 👆 this field should not be empty */
+    --font-weight: 600;
+    --font-family: Menlo, Roboto Mono, monospace;
+    /* 👆 this field should not be empty */
+  }
+
+  /* button settings 👆 */
+
+  .ui-btn {
+    box-sizing: border-box;
+    padding: var(--btn-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: var(--btn-default-bg);
+    border: none;
+    cursor: pointer;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
+  }
+
+  .ui-btn span {
+    letter-spacing: var(--btn-letter-spacing);
+    transition: var(--btn-transition);
+    box-sizing: border-box;
+    position: relative;
+    background: inherit;
+  }
+
+  .ui-btn span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+  }
+
+  .ui-btn:hover,
+  .ui-btn:focus {
+    background: var(--btn-hover-bg);
+  }
+
+  .ui-btn:hover span,
+  .ui-btn:focus span {
+    color: var(--hover-btn-color);
+  }
+
+  .ui-btn:hover span::before,
+  .ui-btn:focus span::before {
+    animation: chitchat linear both var(--btn-animation-duration);
+  }
+
+  @keyframes chitchat {
+    0% {
+      content: "#";
+    }
+
+    5% {
+      content: ".";
+    }
+
+    10% {
+      content: "^{";
+    }
+
+    15% {
+      content: "-!";
+    }
+
+    20% {
+      content: "#$_";
+    }
+
+    25% {
+      content: "№:0";
+    }
+
+    30% {
+      content: "#{+.";
+    }
+
+    35% {
+      content: "@}-?";
+    }
+
+    40% {
+      content: "?{4@%";
+    }
+
+    45% {
+      content: "=.,^!";
+    }
+
+    50% {
+      content: "?2@%";
+    }
+
+    55% {
+      content: "\;1}]";
+    }
+
+    60% {
+      content: "?{%:%";
+      right: 0;
+    }
+
+    65% {
+      content: "|{f[4";
+      right: 0;
+    }
+
+    70% {
+      content: "{4%0%";
+      right: 0;
+    }
+
+    75% {
+      content: "'1_0<";
+      right: 0;
+    }
+
+    80% {
+      content: "{0%";
+      right: 0;
+    }
+
+    85% {
+      content: "]>'";
+      right: 0;
+    }
+
+    90% {
+      content: "4";
+      right: 0;
+    }
+
+    95% {
+      content: "2";
+      right: 0;
+    }
+
+    100% {
+      content: "";
+      right: 0;
+    }
+  }
+</style>

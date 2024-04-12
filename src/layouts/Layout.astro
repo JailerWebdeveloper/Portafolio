@@ -1,0 +1,75 @@
+---
+import Navbar from "../components/Navbar.astro";
+
+interface Props {
+  title: string;
+}
+import 'animate.css';
+
+const { title } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+  </body><style is:global>
+
+body::-webkit-scrollbar {
+        width: 7px;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background: #414141;
+      }
+      .textured{
+        position: relative;
+      }
+      .textured::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background-image: url("/background.webp");
+        background-size:100%;
+        background-position: 80%  ;
+        background-repeat:repeat;
+        mix-blend-mode:overlay;
+        z-index: -1;
+	  }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-family: system-ui, sans-serif;
+    }
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+  </style>
+</html>
