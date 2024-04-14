@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  des: string;
+  image: string;
+  live:string;
+  github: string;
+
+}
+const { title, des, image ,live,github} = Astro.props;
+---
+<div class="card lg:card-side bg-base-100 shadow-xl">
+    <figure><img src={image} alt="Album"/></figure>
+    <div class="card-body">
+      <h2 class="card-title uppercase text-gray-100">{title}</h2>
+      <p>{des}</p>
+      <a href={live} class="btn btn-primary">Deploy</a>
+
+      <div class="card-actions justify-start mt-2">
+        <div class="badge badge-outline">Astro</div> 
+      <div class="badge badge-outline">Tailwind</div>
+      <div class="badge badge-outline">Javascript</div>
+      </div>
+    </div>
+  </div>

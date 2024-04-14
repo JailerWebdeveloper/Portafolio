@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar.astro";
 interface Props {
   title: string;
 }
-import 'animate.css';
+import "animate.css";
 
 const { title } = Astro.props;
 import { ViewTransitions } from "astro:transitions";
@@ -16,25 +16,24 @@ import { ViewTransitions } from "astro:transitions";
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/Logo.png" />
     <meta name="generator" content={Astro.generator} />
-    <ViewTransitions />
+    <ViewTransitions transition:animate="slide" />
 
     <title>{title}</title>
   </head>
   <body>
     <Navbar />
     <slot />
-  </body><style is:global>
-
-body::-webkit-scrollbar {
+    <style is:global>
+      body::-webkit-scrollbar {
         width: 7px;
       }
 
       body::-webkit-scrollbar-thumb {
         background: #414141;
       }
-      .textured{
+      .textured {
         position: relative;
       }
       .textured::before {
@@ -46,30 +45,39 @@ body::-webkit-scrollbar {
         height: 100%;
         opacity: 0.3;
         background-image: url("/background.webp");
-        background-size:100%;
-        background-position: 80%  ;
-        background-repeat:repeat;
-        mix-blend-mode:overlay;
+        background-size: 100%;
+        background-position: 80%;
+        background-repeat: repeat;
+        mix-blend-mode: overlay;
         z-index: -1;
-	  }
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-    html {
-      font-family: system-ui, sans-serif;
-    }
-    code {
-      font-family:
-        Menlo,
-        Monaco,
-        Lucida Console,
-        Liberation Mono,
-        DejaVu Sans Mono,
-        Bitstream Vera Sans Mono,
-        Courier New,
-        monospace;
-    }
-  </style>
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-family: system-ui, sans-serif;
+      }
+      @media print {
+        /* Estilos para la impresión */
+        body {
+          color: black !important; /* Cambiar el color del texto a negro */
+        }
+
+        /* Puedes agregar estilos adicionales para la impresión si es necesario */
+      }
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+    </style>
+  </body>
 </html>
